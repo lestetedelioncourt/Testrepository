@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>Introduction</h1>
+<p>Connectable refers to any object that has the ability to be connected to and disconnected from. Following this state machine ensures a common understanding of the terminology used to describe the state of connectable components is observed and that the representation of state and connection methodology is common across all hardware wrappers.</p>
+<p><b>NOTE:</b> The connection state is an internal representation of an external actor. For example, an 'Open' state means 'we believe it is open' and no guarantee can be made about the true state of the hardware.</p>
+<h1>State Diagram</h1>
+<p>The following diagram describes the available states and transitions for a connectable.</p>
+<img alt="Image of connectable state diagram" src="connectableStateDiagram.png">
+<h1>States</h1>
+<ul>
+    <li><b>Closed</b>- the connection is closed. No active connection exists.</li>
+    <li><b>Opening</b>- an attempt to open a connection did not result in failure.</li>
+    <li><b>Open</b>- an attempt to open a connection did not result in failure.</li>
+    <li><b>Unopened</b>-  an attempt to open a connection resulted in failure.</li>
+    <li><b>Verifying</b>- an open connection exists and is being verified.</li>
+    <li><b>Connected</b>- an open connection exists and has been verified.</li>
+    <li><b>Unverified</b>- an open connection exists but could not be verified.</li>
+    <li><b>Dropped</b>- the connection was unintentionally and unexpectedly broken.</li>
+    <li><b>Closing</b>- the connection is in the process of being closed. </li>
+    <li><b>Fatal</b>- the connection is in a fatal, unrecoverable state.</li>
+</ul>
+</body>
+</html>
