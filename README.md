@@ -1,2 +1,2 @@
 # Testrepository
-Tests git
+Neural Networks mainly
