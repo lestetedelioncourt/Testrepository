@@ -1,0 +1,5 @@
+dhprebn = (dhpreact * bngain * bnvar_inv) + ((-0.5 * (dhpreact * bngain * bndiff * (bnvar + 1e-5)**-1.5).sum(0, keepdim=True) * 2 * bndiff / hprebn.shape[0]) + (-1 * (dhpreact * bngain * bnvar_inv).sum(0, keepdim=True) / hprebn.shape[0])
+
+dx = (dy * gamma / torch.sqrt(bnvar + 1e-5)) + (2.0/m * bndiff * (-0.5 * (dy * gamma * bndiff * (bnvar + 1e-5)**-1.5).sum(0, keepdim=True)) + (-1.0/m * (dy * gamma / torch.sqrt(bnvar + 1e-5)).sum(0, keepdim=True))
+
+dhprebn=(dhpreact×bngain×bnvar_inv)+(2/hprebn.shape[0]×bndiff×(−0.5×(dhpreact×bngain×bndiff×(bnvar+1e−5)**−1.5).sum(0, keepdim=True)))+(−1/hprebn.shape[0]×(dhpreact×bngain×bnvar_inv).sum(0, keepdim=True))
